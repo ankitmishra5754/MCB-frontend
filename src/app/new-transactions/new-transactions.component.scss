@@ -1,0 +1,49 @@
+.form {
+    min-width: 150px;
+    max-width: 100%;
+    width: 90%;
+    margin: 50px;
+    padding-right: 50px;
+    button{
+      color: white;
+      background-color: black;
+  }
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+  
+  td {
+    padding-right: 8px;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+  .warning{
+      margin:0%;
+      color: chocolate;
+  }
+
+  .message{
+      color: green;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-bottom: thin solid;
+    border-spacing: 2px;
+    border-color: grey;
+    margin-bottom: 20px;
+    // border-bottom: green;
+}

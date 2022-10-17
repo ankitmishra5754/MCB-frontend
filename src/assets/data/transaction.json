@@ -1,0 +1,22 @@
+[
+    {"id": 1,  "customerName": "Ram", "transferAmount": 1.0079, "transferCurrency": "INR","reference": "CUSram"},
+    {"id": 2,  "customerName": "Raj", "transferAmount": 4.0026, "transferCurrency": "USD","reference": "CUSram"},
+    {"id": 3,  "customerName": "Lium", "transferAmount": 6.941, "transferCurrency": "EUR","reference": "CUSram"},
+    {"id": 4,  "customerName": "Beryllium", "transferAmount": 9.0122, "transferCurrency": "INR","reference": "CUSram"},
+    {"id": 5,  "customerName": "Boron", "transferAmount": 10.811, "transferCurrency": "INR","reference": "CUSram"},
+    {"id": 6,  "customerName": "dim", "transferAmount": 12.0107, "transferCurrency": "INR","reference": "CUSram"},
+    {"id": 7,  "customerName": "Nitron", "transferAmount": 14.0067, "transferCurrency": "USD","reference": "CUSram"},
+    {"id": 8,  "customerName": "Oxyn", "transferAmount": 15.9994, "transferCurrency": "CHF","reference": "CUSram"},
+    {"id": 9,  "customerName": "Flune", "transferAmount": 18.9984, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 10,  "customerName": "Neon", "transferAmount": 20.1797, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 11,  "customerName": "Sodm", "transferAmount": 22.9897, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 12,  "customerName": "Mag", "transferAmount": 24.305, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 13,  "customerName": "Alum", "transferAmount": 26.9815, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 14,  "customerName": "Sili", "transferAmount": 28.0855, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 15,  "customerName": "Phosprus", "transferAmount": 30.9738, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 16,  "customerName": "Sulf", "transferAmount": 32.065, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 17,  "customerName": "Chlo", "transferAmount": 35.453, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 18,  "customerName": "Arg", "transferAmount": 39.948, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 19,  "customerName": "Pota", "transferAmount": 39.0983, "transferCurrency": "MUR","reference": "CUSram"},
+    {"id": 20,  "customerName": "Calc", "transferAmount": 40.078, "transferCurrency": "MUR","reference": "CUSram"}
+    ]

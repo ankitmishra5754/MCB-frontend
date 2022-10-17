@@ -1,0 +1,10 @@
+{
+    "auth":[
+        {
+            "userName": "admin",
+            "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2NjAyNDUwNSwiaWF0IjoxNjY1OTg4NTA1fQ.XlRSVaRh7F8zrrmA8jUAvAiFl9_Li1kI4oomrmM2Vb4",
+            "role": "admin",
+            "attempt": 0
+        }
+    ]
+}

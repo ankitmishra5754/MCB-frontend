@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="mx-auto login-container">
+            <form class="text-center border border-light p-5" (ngSubmit)="login()" #loginForm="ngForm">
+                <p class="h4 mb-4">LOGIN</p>
+                <div class="text-danger">{{errorMessage}}</div>
+                <div class="mb-4">
+                    <input type="text" required name="loginFormUserName" class="form-control" [(ngModel)]="userName"
+                    placeholder="UserName" #user = "ngModel" [ngClass]="{'is-invalid':user.touched && !user.valid}">
+                    <span>
+                        <small class="text-danger" *ngIf=" user.touched && user.errors?.['required']">User name is required</small>
+                    </span>
+                </div>
+
+
+
+               <div class="mb-4">
+                    <input type="password" required name="loginFormPassword" class="form-control" [(ngModel)]="password"
+                    placeholder="Password" #pwd= "ngModel" [ngClass]="{'is-invalid':pwd.touched && !pwd.valid}">
+                    <span>
+                        <small class="text-danger" *ngIf="pwd.touched && pwd.errors?.['required']">Password is required</small>
+                    </span>
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">LOGIN</button>
+              </form>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,145 @@
+<form class="form" #newTransactionForm = "ngForm" (ngSubmit)="addTransaction(newTransactionForm)">
+    <table class="full-width" cellspacing="0" style="border-top: 10px;">
+        <tr style="padding-bottom: 24px;">
+            <td style="margin-bottom:16px">
+                <mat-radio-group  aria-label="Select an option" style="margin-right:16px">
+                    <mat-radio-button value="1">New</mat-radio-button>
+                    <mat-radio-button value="2">Existing</mat-radio-button>
+                </mat-radio-group>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Reference</mat-label>
+                    <input [disabled]="true" type="text" matInput required name="reference" class="form-control" [(ngModel)]="reference"
+                    placeholder="Reference" #ref = "ngModel" [ngClass]="{'is-invalid':ref.touched && !ref.valid}">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer number</mat-label>
+                    <input type="text" matInput required name="customerNumber" class="form-control" [(ngModel)]="customerNumber"
+                    placeholder="Customer Number" #custNo = "ngModel" [ngClass]="{'is-invalid':custNo.touched && !custNo.valid}"
+                    (change)="onCustomerNumberChange()">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer name</mat-label>
+                    <input type="text" matInput required name="customerName" class="form-control" [(ngModel)]="customerName"
+                    placeholder="Customer Name" #custName = "ngModel" [ngClass]="{'is-invalid':custName.touched && !custName.valid}">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer Phone number</mat-label>
+                    <input type="tel" matInput required pattern="[0-9]{10}" name="customerPhoneNumber" class="form-control" [(ngModel)]="customerPhoneNumber"
+                    placeholder="Customer Phone Number" #phoneNo = "ngModel" [ngClass]="{'is-invalid':phoneNo.touched && !phoneNo.valid}">
+                    <span>
+                        <small class="text-danger" *ngIf=" phoneNo.touched && phoneNo.errors?.['pattern']">Enter Numbers Only</small>
+                    </span>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class=" full-width" appearance="fill">
+                    <mat-label>Customer address</mat-label>
+                    <textarea matInput required name="customerAddress" class="form-control" [(ngModel)]="customerAddress"
+                    placeholder="Customer Address" #custAdd = "ngModel" [ngClass]="{'is-invalid':custAdd.touched && !custAdd.valid}"></textarea>
+                </mat-form-field>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Transfer Currency</mat-label>
+                    <mat-select [(ngModel)]="transferCurrency" name="curreny">
+                        <mat-option value="AED">AED</mat-option>
+                        <mat-option value="EUR">EUR</mat-option>
+                        <mat-option value="CHF">CHF</mat-option>
+                        <mat-option value="MUR">MUR</mat-option>
+                        <mat-option value="USD">USD</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Transfer Amount</mat-label>
+                    <input type="number" matInput required name="transferAmount" class="form-control" [(ngModel)]="transferAmount"
+                    placeholder="Transfer Amount" #amount = "ngModel" [ngClass]="{'is-invalid':amount.touched && !amount.valid}">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Beneficiary Bank</mat-label>
+                    <input type="text" matInput pattern="[a-zA-Z]" required name="beneficiaryBank" class="form-control" [(ngModel)]="beneficiaryBank"
+                    placeholder="Beneficiary Bank" #benBank = "ngModel" [ngClass]="{'is-invalid':benBank.touched && !benBank.valid}">
+                    <span>
+                        <small class="text-danger" *ngIf=" benBank.touched && benBank.errors?.['pattern']">Enter Characters Only</small>
+                    </span>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Beneficiary Account Number</mat-label>
+                    <input type="text" matInput required name="beneficiaryAccountNumber" class="form-control" [(ngModel)]="beneficiaryAccountNumber"
+                    placeholder="Beneficiary Account Number" #benAccNo = "ngModel" [ngClass]="{'is-invalid':benAccNo.touched && !benAccNo.valid}">
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <mat-label>Payment details</mat-label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Credit/Debit Card Details</mat-label>
+                    <input type="text" matInput required name="creditDebitCard" class="form-control" [(ngModel)]="creditDebitCard"
+                    placeholder="Credit/Debit Card Details" #card = "ngModel" [ngClass]="{'is-invalid':card.touched && !card.valid}">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Valid Through</mat-label>
+                    <input type="text" matInput required name="validThrough" class="form-control" [(ngModel)]="validThrough"
+                    placeholder="Valid Through" #valid = "ngModel" [ngClass]="{'is-invalid':valid.touched && !valid.valid}">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>cvv</mat-label>
+                    <input type="text" matInput required maxlength="4" name="cvv" class="form-control" [(ngModel)]="cvv"
+                    placeholder="CVV" #cvvNo = "ngModel" [ngClass]="{'is-invalid':cvvNo.touched && !cvvNo.valid}">
+                </mat-form-field>
+            </td>
+
+        </tr>
+        <tr style="border-style: outset;border-color: tomato;">
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Region:</mat-label>
+                    <mat-select [(ngModel)]="region" name="region">
+                        <mat-option value="one">Port Louis</mat-option>
+                        <mat-option value="two">Curepipe, Vacoas</mat-option>
+                        <mat-option value="two">Port Mathurin</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </tr>
+
+    </table>
+    <div>
+        <button mat-raised-button type="submit" [disabled]="!newTransactionForm.valid" class="btn btn-primary" style="margin-right:16px">Create Transaction</button>
+    </div>
+</form>
